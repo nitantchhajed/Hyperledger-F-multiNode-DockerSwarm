@@ -7,8 +7,8 @@ version: '2'
 
 services:
 
-  orderer1.org2@subskribo.be:
-    container_name: orderer1.org2@subskribo.be
+  orderer1.org2.subskribo.be:
+    container_name: orderer1.org2.subskribo.be
     extends:
       file: peer-base.yaml
       service: orderer-base
@@ -16,51 +16,51 @@ services:
         - ../channel-artifacts/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
         - ../crypto-config/ordererOrganizations/org2@subskribo.be/orderers/orderer1.org2@subskribo.be/msp:/var/hyperledger/orderer/msp
         - ../crypto-config/ordererOrganizations/org2@subskribo.be/orderers/orderer1.org2@subskribo.be/tls/:/var/hyperledger/orderer/tls
-        - orderer1.org2@subskribo.be:/var/hyperledger/production/orderer
+        - orderer1.org2.subskribo.be:/var/hyperledger/production/orderer
     ports:
       - 7050:7050
 
-  peer0.org1@subskribo.be:
-    container_name: peer0.org1@subskribo.be
+  peer0.org1.subskribo.be:
+    container_name: peer0.org1.subskribo.be
     extends:
       file: peer-base.yaml
       service: peer-base
     environment:
-      - CORE_PEER_ID=peer0.org1@subskribo.be
-      - CORE_PEER_ADDRESS=peer0.org1@subskribo.be:7051
+      - CORE_PEER_ID=peer0.org1.subskribo.be
+      - CORE_PEER_ADDRESS=peer0.org1.subskribo.be:7051
       - CORE_PEER_LISTENADDRESS=0.0.0.0:7051
-      - CORE_PEER_CHAINCODEADDRESS=peer0.org1@subskribo.be:7052
+      - CORE_PEER_CHAINCODEADDRESS=peer0.org1.subskribo.be:7052
       - CORE_PEER_CHAINCODELISTENADDRESS=0.0.0.0:7052
-      - CORE_PEER_GOSSIP_BOOTSTRAP=peer1.org1@subskribo.be:8051
-      - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer0.org1@subskribo.be:7051
+      - CORE_PEER_GOSSIP_BOOTSTRAP=peer1.org1.subskribo.be:8051
+      - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer0.org1.subskribo.be:7051
       - CORE_PEER_LOCALMSPID=Org1MSP
     volumes:
         - /var/run/:/host/var/run/
         - ../crypto-config/peerOrganizations/org1@subskribo.be/peers/peer0.org1@subskribo.be/msp:/etc/hyperledger/fabric/msp
         - ../crypto-config/peerOrganizations/org1@subskribo.be/peers/peer0.org1@subskribo.be/tls:/etc/hyperledger/fabric/tls
-        - peer0.org1@subskribo.be:/var/hyperledger/production
+        - peer0.org1.subskribo.be:/var/hyperledger/production
     ports:
       - 7051:7051
       
-  peer1.org1@subskribo.be:
-    container_name: peer1.org1@subskribo.be
+  peer1.org1.subskribo.be:
+    container_name: peer1.org1.subskribo.be
     extends:
       file: peer-base.yaml
       service: peer-base
     environment:
-      - CORE_PEER_ID=peer1.org1@subskribo.be
-      - CORE_PEER_ADDRESS=peer1.org1@subskribo.be:8051
+      - CORE_PEER_ID=peer1.org1.subskribo.be
+      - CORE_PEER_ADDRESS=peer1.org1.subskribo.be:8051
       - CORE_PEER_LISTENADDRESS=0.0.0.0:8051
-      - CORE_PEER_CHAINCODEADDRESS=peer1.org1@subskribo.be:8052
+      - CORE_PEER_CHAINCODEADDRESS=peer1.org1.subskribo.be:8052
       - CORE_PEER_CHAINCODELISTENADDRESS=0.0.0.0:8052
-      - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer1.org1@subskribo.be:8051
-      - CORE_PEER_GOSSIP_BOOTSTRAP=peer0.org1@subskribo.be:7051
+      - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer1.org1.subskribo.be:8051
+      - CORE_PEER_GOSSIP_BOOTSTRAP=peer0.org1.subskribo.be:7051
       - CORE_PEER_LOCALMSPID=Org1MSP
     volumes:
         - /var/run/:/host/var/run/
         - ../crypto-config/peerOrganizations/org1@subskribo.be/peers/peer1.org1@subskribo.be/msp:/etc/hyperledger/fabric/msp
         - ../crypto-config/peerOrganizations/org1@subskribo.be/peers/peer1.org1@subskribo.be/tls:/etc/hyperledger/fabric/tls
-        - peer1.org1@subskribo.be:/var/hyperledger/production
+        - peer1.org1.subskribo.be:/var/hyperledger/production
 
     ports:
       - 8051:8051
