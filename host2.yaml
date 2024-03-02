@@ -35,6 +35,8 @@ services:
 
   peer1.org1.subskribo.be:
     container_name: peer1.org1.subskribo.be
+    environment:
+      - CORE_PEER_MSPCONFIGPATH=/etc/hyperledger/fabric/msp
     extends:
       file:  base/docker-compose-base.yaml
       service: peer1.org1.subskribo.be

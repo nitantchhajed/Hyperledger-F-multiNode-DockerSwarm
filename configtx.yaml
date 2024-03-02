@@ -24,7 +24,7 @@ Organizations:
         # ID to load the MSP definition as
         ID: OrdererMSP
         # MSPDir is the filesystem path which contains the MSP configuration
-        MSPDir: crypto-config/ordererOrganizations/org2@subskribo.be/msp
+        MSPDir: crypto-config/ordererOrganizations/org2.subskribo.be/msp
 
         # Policies defines the set of policies at this level of the config tree
         # For organization policies, their canonical path is usually
@@ -48,7 +48,7 @@ Organizations:
         # ID to load the MSP definition as
         ID: Org1MSP
 
-        MSPDir: crypto-config/peerOrganizations/org1@subskribo.be/msp
+        MSPDir: crypto-config/peerOrganizations/org1.subskribo.be/msp
 
         # Policies defines the set of policies at this level of the config tree
         # For organization policies, their canonical path is usually
@@ -72,7 +72,7 @@ Organizations:
             # AnchorPeers defines the location of peers which can be used
             # for cross org gossip communication.  Note, this value is only
             # encoded in the genesis block in the Application section context
-            - Host: peer0.org1@subskribo.be
+            - Host: peer0.org1.subskribo.be
               Port: 7051
 
     # - &Org2
@@ -215,7 +215,7 @@ Orderer: &OrdererDefaults
     OrdererType: etcdraft
 
     Addresses:
-        - orderer1.org2@subskribo.be:7050
+        - orderer1.org2.subskribo.be:7050
 
     # Batch Timeout: The amount of time to wait before creating a batch
     BatchTimeout: 2s
@@ -320,18 +320,18 @@ Profiles:
             OrdererType: etcdraft
             EtcdRaft:
                 Consenters:
-                - Host: orderer1.org2@subskribo.be
+                - Host: orderer1.org2.subskribo.be
                   Port: 7050
-                  ClientTLSCert: crypto-config/ordererOrganizations/org2@subskribo.be/orderers/orderer1.org2@subskribo.be/tls/server.crt
-                  ServerTLSCert: crypto-config/ordererOrganizations/org2@subskribo.be/orderers/orderer1.org2@subskribo.be/tls/server.crt
-                - Host: orderer2.org2@subskribo.be
+                  ClientTLSCert: crypto-config/ordererOrganizations/org2.subskribo.be/orderers/orderer1.org2.subskribo.be/tls/server.crt
+                  ServerTLSCert: crypto-config/ordererOrganizations/org2.subskribo.be/orderers/orderer1.org2.subskribo.be/tls/server.crt
+                - Host: orderer2.org2.subskribo.be
                   Port: 8050
-                  ClientTLSCert: crypto-config/ordererOrganizations/org2@subskribo.be/orderers/orderer2.org2@subskribo.be/tls/server.crt
-                  ServerTLSCert: crypto-config/ordererOrganizations/org2@subskribo.be/orderers/orderer2.org2@subskribo.be/tls/server.crt
-                - Host: orderer3.org2@subskribo.be
+                  ClientTLSCert: crypto-config/ordererOrganizations/org2.subskribo.be/orderers/orderer2.org2.subskribo.be/tls/server.crt
+                  ServerTLSCert: crypto-config/ordererOrganizations/org2.subskribo.be/orderers/orderer2.org2.subskribo.be/tls/server.crt
+                - Host: orderer3.org2.subskribo.be
                   Port: 9050
-                  ClientTLSCert: crypto-config/ordererOrganizations/org2@subskribo.be/orderers/orderer3.org2@subskribo.be/tls/server.crt
-                  ServerTLSCert: crypto-config/ordererOrganizations/org2@subskribo.be/orderers/orderer3.org2@subskribo.be/tls/server.crt
+                  ClientTLSCert: crypto-config/ordererOrganizations/org2.subskribo.be/orderers/orderer3.org2.subskribo.be/tls/server.crt
+                  ServerTLSCert: crypto-config/ordererOrganizations/org2.subskribo.be/orderers/orderer3.org2.subskribo.be/tls/server.crt
                 # - Host: orderer4.org2@subskribo.be
                 #   Port: 10050
                 #   ClientTLSCert: crypto-config/ordererOrganizations/org2@subskribo.be/orderers/orderer4.org2@subskribo.be/tls/server.crt
@@ -341,9 +341,9 @@ Profiles:
                 #   ClientTLSCert: crypto-config/ordererOrganizations/org2@subskribo.be/orderers/orderer5.org2@subskribo.be/tls/server.crt
                 #   ServerTLSCert: crypto-config/ordererOrganizations/org2@subskribo.be/orderers/orderer5.org2@subskribo.be/tls/server.crt
             Addresses:
-                - orderer1.org2@subskribo.be:7050
-                - orderer2.org2@subskribo.be:8050
-                - orderer3.org2@subskribo.be:9050
+                - orderer1.org2.subskribo.be:7050
+                - orderer2.org2.subskribo.be:8050
+                - orderer3.org2.subskribo.be:9050
 
 
             Organizations:

@@ -47,6 +47,8 @@ services:
     extends:
       file:  base/docker-compose-base.yaml
       service: peer0.org1.subskribo.be
+    environment:
+      - CORE_PEER_MSPCONFIGPATH=/etc/hyperledger/fabric/msp
     networks:
       - byfn
 
@@ -82,5 +84,5 @@ services:
       # - orderer.example.com
       - peer0.org1.subskribo.be
     networks:
-      - hlf-network
+      - byfn
 

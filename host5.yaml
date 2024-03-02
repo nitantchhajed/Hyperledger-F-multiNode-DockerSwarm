@@ -1,0 +1,31 @@
+# Copyright IBM Corp. All Rights Reserved.
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+version: '2'
+
+volumes:
+  orderer3.example.com:
+  # peer1.org1.subskribo.be:
+
+networks:
+  byfn:
+    external:
+      name: hlf-network 
+  orderer3.org2.subskribo.be:
+    extends:
+      file: base/peer-base.yaml
+      service: orderer-base
+    environment:
+      - ORDERER_GENERAL_LISTENPORT=9050
+    container_name: orderer3.org2.subskribo.be
+    networks:
+    - byfn
+    volumes:
+        - ./channel-artifacts/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
+        - ./crypto-config/ordererOrganizations/org2@subskribo.be/orderers/orderer3.org2@subskribo.be/msp:/var/hyperledger/orderer/msp
+        - ./crypto-config/ordererOrganizations/org2@subskribo.be/orderers/orderer3.org2@subskribo.be/tls/:/var/hyperledger/orderer/tls
+        - orderer3.org2.subskribo.be:/var/hyperledger/production/orderer
+    ports:
+    - 9050:9050
