@@ -13,6 +13,8 @@ networks:
   byfn:
     external:
       name: hlf-network 
+
+services:
   orderer3.org2.subskribo.be:
     extends:
       file: base/peer-base.yaml
