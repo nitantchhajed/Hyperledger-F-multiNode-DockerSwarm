@@ -1,4 +1,4 @@
-docker exec cli peer channel create -o orderer1.org2.subskribo.be:7050 -c system-channel -f ./channel-artifacts/channel.tx --tls --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/org2.subskribo.be/orderers/orderer1.org2.subskribo.be/msp/tlscacerts/tlsca.org2.subskribo.be-cert.pem
+docker exec cli peer channel create -o orderer1.org2.subskribo.be:7050 -c mychannel -f ./channel-artifacts/channel.tx --tls --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/org2.subskribo.be/orderers/orderer1.org2.subskribo.be/msp/tlscacerts/tlsca.org2.subskribo.be-cert.pem
 sleep 5
 
 docker exec cli peer channel join -b ./channel-artifacts/genesis.block
