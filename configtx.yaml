@@ -191,7 +191,7 @@ Application: &ApplicationDefaults
             Rule: "ANY Writers"
         Admins:
             Type: ImplicitMeta
-            Rule: "ANY Admins"
+            Rule: "MAJORITY Admins"
         LifecycleEndorsement:
             Type: ImplicitMeta
             Rule: "MAJORITY Endorsement"
@@ -307,7 +307,6 @@ Profiles:
             <<: *ApplicationDefaults
             Organizations:
                 - *Org1
-                # - *Org2
             Capabilities:
                 <<: *ApplicationCapabilities
 
