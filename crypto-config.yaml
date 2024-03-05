@@ -18,8 +18,6 @@ OrdererOrgs:
       - Hostname: orderer1
       - Hostname: orderer2
       - Hostname: orderer3
-      # - Hostname: orderer4
-      # - Hostname: orderer5
 
 # ---------------------------------------------------------------------------
 # "PeerOrgs" - Definition of organizations managing peer nodes
@@ -35,16 +33,7 @@ PeerOrgs:
     # ---------------------------------------------------------------------------
     Template:
       Count: 2
-      # Start: 5
-      # Hostname: {{.Prefix}}{{.Index}} # default
-    # ---------------------------------------------------------------------------
-    # "Users"
-    # ---------------------------------------------------------------------------
-    # Count: The number of user accounts _in addition_ to Admin
-    # ---------------------------------------------------------------------------
+
     Users:
       Count: 1
-  # ---------------------------------------------------------------------------
-  # Org2: See "Org1" for full specification
-  # ---------------------------------------------------------------------------
 
