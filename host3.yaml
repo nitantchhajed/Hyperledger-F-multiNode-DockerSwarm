@@ -7,7 +7,7 @@
 version: '2'
 
 volumes:
-  orderer1.org2.subskribo.be:  
+  orderer0.subskribo.be:  
   # peer0.org2.example.com:
 
 networks:
@@ -16,11 +16,11 @@ networks:
       name: hlf-network
 
 services:
-  orderer1.org2.subskribo.be:
+  orderer0.subskribo.be:
     extends:
       file:   base/docker-compose-base.yaml
-      service: orderer1.org2.subskribo.be
-    container_name: orderer1.org2.subskribo.be
+      service: orderer0.subskribo.be
+    container_name: orderer0.subskribo.be
     networks:
       - byfn
 

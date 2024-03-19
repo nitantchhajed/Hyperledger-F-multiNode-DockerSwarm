@@ -6,7 +6,7 @@
 version: '2'
 
 volumes:
-  orderer3.org2.subskribo.be:
+  orderer2.subskribo.be:
   # peer1.org1.subskribo.be:
 
 networks:
@@ -15,19 +15,19 @@ networks:
       name: hlf-network 
 
 services:
-  orderer3.org2.subskribo.be:
+  orderer2.subskribo.be:
     extends:
       file: base/peer-base.yaml
       service: orderer-base
     environment:
       - ORDERER_GENERAL_LISTENPORT=9050
-    container_name: orderer3.org2.subskribo.be
+    container_name: orderer2.subskribo.be
     networks:
     - byfn
     volumes:
         - ./channel-artifacts/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
-        - ./crypto-config/ordererOrganizations/org2.subskribo.be/orderers/orderer3.org2.subskribo.be/msp:/var/hyperledger/orderer/msp
-        - ./crypto-config/ordererOrganizations/org2.subskribo.be/orderers/orderer3.org2.subskribo.be/tls/:/var/hyperledger/orderer/tls
-        - orderer3.org2.subskribo.be:/var/hyperledger/production/orderer
+        - ./crypto-config/ordererOrganizations/subskribo.be/orderers/orderer2.subskribo.be/msp:/var/hyperledger/orderer/msp
+        - ./crypto-config/ordererOrganizations/subskribo.be/orderers/orderer2.subskribo.be/tls/:/var/hyperledger/orderer/tls
+        - orderer2.subskribo.be:/var/hyperledger/production/orderer
     ports:
     - 9050:9050

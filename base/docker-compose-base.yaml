@@ -7,7 +7,7 @@ version: '2'
 
 services:
 
-  orderer1.org2.subskribo.be:
+  orderer0.subskribo.be:
     container_name: orderer1.org2.subskribo.be
     extends:
       file: peer-base.yaml
