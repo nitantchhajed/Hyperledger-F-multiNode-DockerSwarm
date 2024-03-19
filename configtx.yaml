@@ -162,8 +162,6 @@ Orderer: &OrdererDefaults
   # to include the OrdererEndpoints item in your org definition
   Addresses:
     - orderer0.subskribo.be:7050
-    - orderer1.subskribo.be:8050
-    - orderer2.subskribo.be:9050
 
   # Batch Timeout: The amount of time to wait before creating a batch
   BatchTimeout: 2s

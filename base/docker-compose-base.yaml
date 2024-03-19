@@ -8,15 +8,15 @@ version: '2'
 services:
 
   orderer0.subskribo.be:
-    container_name: orderer1.org2.subskribo.be
+    container_name: orderer0.org2.subskribo.be
     extends:
       file: peer-base.yaml
       service: orderer-base
     volumes:
         - ../channel-artifacts/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
-        - ../crypto-config/ordererOrganizations/org2.subskribo.be/orderers/orderer1.org2.subskribo.be/msp:/var/hyperledger/orderer/msp
-        - ../crypto-config/ordererOrganizations/org2.subskribo.be/orderers/orderer1.org2.subskribo.be/tls/:/var/hyperledger/orderer/tls
-        - orderer1.org2.subskribo.be:/var/hyperledger/production/orderer
+        - ../crypto-config/ordererOrganizations/org2.subskribo.be/orderers/orderer0.subskribo.be/msp:/var/hyperledger/orderer/msp
+        - ../crypto-config/ordererOrganizations/org2.subskribo.be/orderers/orderer0.subskribo.be/tls/:/var/hyperledger/orderer/tls
+        - orderer0.subskribo.be:/var/hyperledger/production/orderer
     ports:
       - 7050:7050
 
