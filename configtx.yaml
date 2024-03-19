@@ -59,6 +59,22 @@ Orderer: &OrdererDefaults
               Port: 9050
               ClientTLSCert: crypto-config/ordererOrganizations/subskribo.be/orderers/orderer2.subskribo.be/tls/server.crt
               ServerTLSCert: crypto-config/ordererOrganizations/subskribo.be/orderers/orderer2.subskribo.be/tls/server.crt
+        Policies:
+        Readers:
+            Type: ImplicitMeta
+            Rule: "ANY Readers"
+        Writers:
+            Type: ImplicitMeta
+            Rule: "ANY Writers"
+        Admins:
+            Type: ImplicitMeta
+            Rule: "MAJORITY Admins"
+        # BlockValidation specifies what signatures must be included in the block
+        # from the orderer for the peer to validate it.
+        BlockValidation:
+            Type: ImplicitMeta
+            Rule: "ANY Writers"
+
 
     BatchTimeout: 2s
     BatchSize:
@@ -73,7 +89,7 @@ Capabilities:
         V2_0: true
     Application: &ApplicationCapabilities
         V2_0: true
-        
+
 Application: &ApplicationDefaults
     Organizations:
     Policies:
