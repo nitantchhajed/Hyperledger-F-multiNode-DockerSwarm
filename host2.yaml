@@ -6,7 +6,7 @@
 version: '2'
 
 volumes:
-  # orderer2.example.com:
+  # orderer1.subskribo.be:
   peer1.org1.subskribo.be:
 
 networks:
@@ -16,20 +16,20 @@ networks:
 
 services:
 
-  # orderer2.example.com:
+  # orderer1.subskribo.be:
   #   extends:
   #     file: base/peer-base.yaml
   #     service: orderer-base
   #   environment:
   #     - ORDERER_GENERAL_LISTENPORT=8050
-  #   container_name: orderer2.example.com
+  #   container_name: orderer1.subskribo.be
   #   networks:
   #   - byfn
   #   volumes:
   #       - ./channel-artifacts/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
-  #       - ./crypto-config/ordererOrganizations/example.com/orderers/orderer2.example.com/msp:/var/hyperledger/orderer/msp
-  #       - ./crypto-config/ordererOrganizations/example.com/orderers/orderer2.example.com/tls/:/var/hyperledger/orderer/tls
-  #       - orderer2.example.com:/var/hyperledger/production/orderer
+  #       - ./crypto-config/ordererOrganizations/subskribo.be/orderers/orderer1.subskribo.be/msp:/var/hyperledger/orderer/msp
+  #       - ./crypto-config/ordererOrganizations/subskribo.be/orderers/orderer1.subskribo.be/tls/:/var/hyperledger/orderer/tls
+  #       - orderer1.subskribo.be:/var/hyperledger/production/orderer
   #   ports:
   #   - 8050:8050
 

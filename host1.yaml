@@ -7,7 +7,7 @@ version: '2'
 
 volumes:
   # orderer1.org2@subskribo.be:
-  # orderer5.example.com:
+  # orderer5.subskribo.be:
   peer0.org1.subskribo.be:
 
 networks:

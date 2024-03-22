@@ -7,7 +7,7 @@ version: '2'
 
 volumes:
   orderer1.subskribo.be:
-  # peer1.org2.example.com:
+  # peer1.org2.subskribo.be:
 
 networks:
   byfn:
@@ -32,28 +32,28 @@ services:
     ports:
     - 8050:8050
 
-  # orderer4.example.com:
+  # orderer4.subskribo.be:
   #   extends:
   #     file: base/peer-base.yaml
   #     service: orderer-base
   #   environment:
   #     - ORDERER_GENERAL_LISTENPORT=10050
-  #   container_name: orderer4.example.com
+  #   container_name: orderer4.subskribo.be
   #   networks:
   #   - byfn
   #   volumes:
   #       - ./channel-artifacts/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
-  #       - ./crypto-config/ordererOrganizations/example.com/orderers/orderer4.example.com/msp:/var/hyperledger/orderer/msp
-  #       - ./crypto-config/ordererOrganizations/example.com/orderers/orderer4.example.com/tls/:/var/hyperledger/orderer/tls
-  #       - orderer4.example.com:/var/hyperledger/production/orderer
+  #       - ./crypto-config/ordererOrganizations/subskribo.be/orderers/orderer4.subskribo.be/msp:/var/hyperledger/orderer/msp
+  #       - ./crypto-config/ordererOrganizations/subskribo.be/orderers/orderer4.subskribo.be/tls/:/var/hyperledger/orderer/tls
+  #       - orderer4.subskribo.be:/var/hyperledger/production/orderer
   #   ports:
   #   - 10050:10050
 
-  # peer1.org2.example.com:
-  #   container_name: peer1.org2.example.com
+  # peer1.org2.subskribo.be:
+  #   container_name: peer1.org2.subskribo.be
   #   extends:
   #     file:  base/docker-compose-base.yaml
-  #     service: peer1.org2.example.com
+  #     service: peer1.org2.subskribo.be
   #   networks:
   #     - byfn
 

@@ -8,7 +8,7 @@ version: '2'
 
 volumes:
   orderer0.subskribo.be:  
-  # peer0.org2.example.com:
+  # peer0.org2.subskribo.be:
 
 networks:
   byfn:
@@ -41,11 +41,11 @@ services:
   #   ports:
   #   - 9050:9050
 
-  # peer0.org2.example.com:
-  #   container_name: peer0.org2.example.com
+  # peer0.org2.subskribo.be:
+  #   container_name: peer0.org2.subskribo.be
   #   extends:
   #     file:  base/docker-compose-base.yaml
-  #     service: peer0.org2.example.com
+  #     service: peer0.org2.subskribo.be
   #   networks:
   #     - byfn
 

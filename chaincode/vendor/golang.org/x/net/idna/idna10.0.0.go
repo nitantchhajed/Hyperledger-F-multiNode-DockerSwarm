@@ -223,7 +223,7 @@ func New(o ...Option) *Profile {
 }
 
 // ToASCII converts a domain or domain label to its ASCII form. For example,
-// ToASCII("bücher.example.com") is "xn--bcher-kva.example.com", and
+// ToASCII("bücher.subskribo.be") is "xn--bcher-kva.subskribo.be", and
 // ToASCII("golang") is "golang". If an error is encountered it will return
 // an error and a (partially) processed result.
 func (p *Profile) ToASCII(s string) (string, error) {
@@ -231,7 +231,7 @@ func (p *Profile) ToASCII(s string) (string, error) {
 }
 
 // ToUnicode converts a domain or domain label to its Unicode form. For example,
-// ToUnicode("xn--bcher-kva.example.com") is "bücher.example.com", and
+// ToUnicode("xn--bcher-kva.subskribo.be") is "bücher.subskribo.be", and
 // ToUnicode("golang") is "golang". If an error is encountered it will return
 // an error and a (partially) processed result.
 func (p *Profile) ToUnicode(s string) (string, error) {

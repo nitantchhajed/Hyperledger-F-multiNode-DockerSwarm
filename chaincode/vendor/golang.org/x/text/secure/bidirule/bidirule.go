@@ -20,7 +20,7 @@ import (
 // Internationalized Domain Names for Applications (IDNA)
 //
 // A label is an individual component of a domain name.  Labels are usually
-// shown separated by dots; for example, the domain name "www.example.com" is
+// shown separated by dots; for example, the domain name "www.subskribo.be" is
 // composed of three labels: "www", "example", and "com".
 //
 // An RTL label is a label that contains at least one character of class R, AL,
