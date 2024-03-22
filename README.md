@@ -1,6 +1,21 @@
-*Create Docker network*
+# Create Docker network
 
+*For local -*
+``docker network create hlf-network``
+
+
+*For Swarm deployment- *
+``docker swarm init --advertise-addr <host-1 ip address>``
+
+``docker swarm join-token manager``
+*from the output of above command* 
+
+*on different servers-*
+``<output from join-token manager> --advertise-addr <VM n ip>``
+
+*on 1st server -*
 ``docker network create --attachable --driver overlay hlf-network``
+
 
 
 *Crypto Material*
