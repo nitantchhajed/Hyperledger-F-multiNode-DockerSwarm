@@ -1,12 +1,12 @@
-export FABRIC_CFG_PATH=${PWD}/config/
+
 chmod -R 0755 ./crypto-config
 # Delete existing artifacts
-# rm -rf ./crypto-config
+rm -rf ./crypto-config
 rm genesis.block mychannel.tx
 rm -rf ../../channel-artifacts/*
 
 #Generate Crypto artifactes for organizations
-cryptogen generate --config=./crypto-config.yaml --output=./crypto-config/
+# cryptogen generate --config=./crypto-config.yaml --output=./crypto-config/
 
 
 
@@ -27,4 +27,3 @@ configtxgen -profile BasicChannel -configPath . -outputCreateChannelTx ./mychann
 
 echo "#######    Generating anchor peer update for Org1MSP  ##########"
 configtxgen -profile BasicChannel -configPath . -outputAnchorPeersUpdate ./Org1MSPanchors.tx -channelID $CHANNEL_NAME -asOrg Org1MSP
-

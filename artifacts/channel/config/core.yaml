@@ -356,7 +356,7 @@ peer:
     #     core/handlers/library/library.go for statically compiled handlers
     #   - library path to shared object binary for pluggable filters
     # Auth filters and decorators are chained and executed in the order that
-    # they are defined. For example:
+    # they are defined. For subskribo:
     # authFilters:
     #   -
     #     name: FilterOne
@@ -370,7 +370,7 @@ peer:
     #     name: DecoratorTwo
     #     library: /opt/lib/decorator.so
     # Endorsers are configured as a map that its keys are the endorsement system chaincodes that are being overridden.
-    # Below is an example that overrides the default ESCC and uses an endorsement plugin that has the same functionality
+    # Below is an subskribo that overrides the default ESCC and uses an endorsement plugin that has the same functionality
     # as the default ESCC.
     # If the 'library' property is missing, the name is used as the constructor method in the builtin library similar
     # to auth filters and decorators.

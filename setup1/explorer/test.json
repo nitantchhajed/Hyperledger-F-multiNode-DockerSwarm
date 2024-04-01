@@ -1,0 +1,59 @@
+{
+	"name": "test",
+	"version": "1.0.0",
+	"client": {
+		"tlsEnable": true,
+		"adminCredential": {
+			"id": "exploreradmin",
+			"password": "exploreradminpw"
+		},
+		"enableAuthentication": false,
+		"organization": "Org1MSP",
+		"connection": {
+			"timeout": {
+				"peer": {
+					"endorser": "300"
+				},
+				"orderer": "300"
+			}
+		}
+	},
+	"channels": {
+		"mychannel": {
+			"peers": {
+				"peer0.org1.subskribo.be": {}
+			},
+			"connection": {
+				"timeout": {
+					"peer": {
+						"endorser": "6000",
+						"eventHub": "6000",
+						"eventReg": "6000"
+					}
+				}
+			}
+		}
+	},
+	"organizations": {
+		"Org1MSP": {
+			"mspid": "Org1MSP",
+			"adminPrivateKey": {
+				"path": "/tmp/crypto/peerOrganizations/org1.subskribo.be/users/Admin@org1.subskribo.be/msp/keystore/5443bf536c86d937d237c61f3b74190adcf163bae738bd1af1d7df77659fad70_sk"
+			},
+			"peers": [
+				"peer0.org1.subskribo.be"
+			],
+			"signedCert": {
+				"path": "/tmp/crypto/peerOrganizations/org1.subskribo.be/users/Admin@org1.subskribo.be/msp/signcerts/cert.pem"
+			}
+		}
+	},
+	"peers": {
+		"peer0.org1.subskribo.be": {
+			"tlsCACerts": {
+				"path": "/tmp/crypto/peerOrganizations/org1.subskribo.be/peers/peer0.org1.subskribo.be/tls/ca.crt"
+			},
+			"url": "grpcs://peer0.org1.subskribo.be:7051"
+		}
+	}
+}
